@@ -11,12 +11,12 @@ struct ContentView: View {
     @State private var selectedName = namesMock.first!
     
     var body: some View {
-        ScrollView{
-            VStack (alignment: .center, spacing: 20) {
-                NavigationBar(selectedName: $selectedName)
+        VStack (alignment: .center, spacing: 20) {
+            NavigationBar(selectedName: $selectedName)
+            ScrollView{
                 Features_Grid()
                 CarouselTabView()
-                GoalContainer()                
+                GoalContainer()
             }
         }
         .padding()
